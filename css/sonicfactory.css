@@ -86,8 +86,7 @@ td img {
 
 hr {
   border: none;
-  height: 4px;
-  background-color: #222233; 
-  border-radius: 2px; /* half of the height to make the ends fully rounded */
-  margin: 1em 0; /* optional, for spacing above and below */
+  height: 3px;
+  background-color: #111122; 
+  border-radius: 1px; 
 }
