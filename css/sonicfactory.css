@@ -8,9 +8,11 @@
 }
 
 /* Button links to stores */
-td img {
-  width: 100%;
-  max-width: 240px; /* Adjust based on your design needs */
+table img {
+  width: 260px;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 /* Lightbox gallery */
