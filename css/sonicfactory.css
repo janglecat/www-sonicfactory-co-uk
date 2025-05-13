@@ -83,3 +83,11 @@ td img {
   border: none;
   border-radius: 20px; /* Add rounded corners to the iframe */
 }
+
+hr {
+  border: none;
+  height: 8px;
+  background-color: #aaaaaa; /* or any color you prefer */
+  border-radius: 4px; /* half of the height to make the ends fully rounded */
+  margin: 1em 0; /* optional, for spacing above and below */
+}
