@@ -90,3 +90,10 @@ hr {
   background-color: #111122; 
   border-radius: 1px; 
 }
+
+html {
+  background-image: url("../img/site/back.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+}
