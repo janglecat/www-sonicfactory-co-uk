@@ -1,5 +1,4 @@
 /* Lightbox Gallery Script */
-
 document.addEventListener("DOMContentLoaded", function () {
     const galleryImages = document.querySelectorAll('.gallery a');
     const lightbox = document.createElement('div');
@@ -10,14 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
     lightbox.appendChild(lightboxImage);
 
     galleryImages.forEach(image => {
-    image.addEventListener('click', (e) => {
-        e.preventDefault();
-        lightboxImage.src = image.href;
-        lightbox.classList.add('active');
-    });
+        image.addEventListener('click', (e) => {
+            e.preventDefault();
+            lightboxImage.src = image.href;
+            lightbox.classList.add('active');
+        });
     });
 
     lightbox.addEventListener('click', () => {
-    lightbox.classList.remove('active');
+        lightbox.classList.remove('active');
     });
 });
+
+/* Google Analytics Script */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+// Replace with your actual Measurement ID
+gtag('config', 'G-6M00YGCHY7');
