@@ -84,10 +84,6 @@ td img {
   border-radius: 20px; /* Add rounded corners to the iframe */
 }
 
-table {
-  border-radius: 20px; 
-}
-
 hr {
   border: none;
   height: 3px;
