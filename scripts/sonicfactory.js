@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Google Analytics Script */
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag(){ dataLayer.push(arguments); }
 gtag('js', new Date());
-
-// Replace with your actual Measurement ID
 gtag('config', 'G-6M00YGCHY7');
