@@ -11,35 +11,35 @@
       gtag('config', 'G-KCG63HM864');
     </script>
     
-    <script src="scripts/sonicfactory.js"></script>    
+    <script src="/scripts/sonicfactory.js"></script>    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="css/pico.min.css" />
-    <link rel="stylesheet" href="css/sonicfactory.css">
+    <link rel="stylesheet" href="/css/pico.min.css" />
+    <link rel="stylesheet" href="/css/sonicfactory.css">
     <title>Kinetic Canvas</title>
-    <link rel="icon" type="image/png" href="img/site/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/site/favicon.png" />
     <meta name="description" content="About Sonicfactory">
   </head>
   <body>
     <header>
       <div class="container">
-        <nav>
-          <ul>
-            <li><a href="index.html">Kinetic Canvas</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-          </ul>
-        </nav>
+        <div id="navbar"></div>
+        <script>
+          fetch('/nav.html')  // absolute path to nav.html at root
+            .then(res => res.text())
+            .then(html => {
+              document.getElementById('navbar').innerHTML = html;
+            });
+        </script>
       </div>
     </header>
     <main class="container" aria-labelledby="about-title">
       <h1 id="about-title">About</h1>
-      <img class="stretch-img" src="img/about/about-header.webp" alt="About header image" />
+      <img class="stretch-img" src="/img/about/about-header.webp" alt="About header image" />
       <p>I’m Chris, a software developer, artist and music creator based in London UK.</p>
-      <p>I made <a href="index.html">Kinetic Canvas</a>, an interactive art app for phones, tablets, desktop computers, even VR headsets.</p>
-      <p>I also make <a href="music.html">music</a>.</p>
+      <p>I made <a href="/">Kinetic Canvas</a>, an interactive art app for phones, tablets, desktop computers, even VR headsets.</p>
+      <p>I also make <a href="/music/">music</a>.</p>
       <h2>Socials</h2>
       Instagram: <a href="https://www.instagram.com/sonicfactoryuk/" target="_blank">@sonicfactoryuk</a><br>
       BlueSky: <a href="https://bsky.app/profile/sonicfactory.bsky.social" target="_blank">@sonicfactory.bsky.social</a><br>

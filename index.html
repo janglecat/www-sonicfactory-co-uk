@@ -76,24 +76,24 @@
   <body>
     <header>
       <div class="container">
-        <nav>
-          <ul>
-            <li><a href="index.html">Kinetic Canvas</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-          </ul>
-        </nav>
+        <div id="navbar"></div>
+        <script>
+          fetch('/nav.html')  // absolute path to nav.html at root
+            .then(res => res.text())
+            .then(html => {
+              document.getElementById('navbar').innerHTML = html;
+            });
+        </script>
       </div>
     </header>
     <main class="container" aria-labelledby="kinetic-canvas-title">
       <h1 id="kinetic-canvas-title">Kinetic Canvas</h1>
-      <img class="stretch-img" src="img/kinetic-canvas/logo/kc-header.webp" alt="Kinetic Canvas header logo" />
+      <img class="stretch-img" src="/img/kinetic-canvas/logo/kc-header.webp" alt="Kinetic Canvas header logo" />
 
       <p style="text-align: center; font-size: 1.5em;">Kinetic Canvas is an app to <b style="color: yellow;">play with art</b>.</p>
       <p style="text-align: center; font-size: 1.5em;">It's simple, beautiful, and relaxing.</b></p>
       <video 
-        src="img/kinetic-canvas/videos/kc-preview-vid.mp4" 
+        src="/img/kinetic-canvas/videos/kc-preview-vid.mp4" 
         autoplay 
         muted 
         loop 
@@ -122,19 +122,19 @@
         </thead>        
         <tbody>
           <tr>
-            <td width="35%"><a href="https://apps.apple.com/gb/app/kinetic-canvas/id6740773187" target="_blank" aria-label="Download Kinetic Canvas from Apple App Store"><img src="img/kinetic-canvas/buttons/button_Apple.webp" alt="Apple App Store link button"></td>
+            <td width="35%"><a href="https://apps.apple.com/gb/app/kinetic-canvas/id6740773187" target="_blank" aria-label="Download Kinetic Canvas from Apple App Store"><img src="/img/kinetic-canvas/buttons/button_Apple.webp" alt="Apple App Store link button"></td>
             <td><a href="https://apps.apple.com/gb/app/kinetic-canvas/id6740773187" target="_blank">Apple App Store</a><br><i>iOS (iPhone, iPad, Vision Pro)</i></td>
           </tr>
           <tr>
-            <td width="35%"><a href="https://play.google.com/store/apps/details?id=co.uk.sonicfactory.kineticcanvas" target="_blank" aria-label="Download Kinetic Canvas from Google Play"><img src="img/kinetic-canvas/buttons/button_Google.webp" alt="Google Play link button"></td>
+            <td width="35%"><a href="https://play.google.com/store/apps/details?id=co.uk.sonicfactory.kineticcanvas" target="_blank" aria-label="Download Kinetic Canvas from Google Play"><img src="/img/kinetic-canvas/buttons/button_Google.webp" alt="Google Play link button"></td>
             <td><a href="https://play.google.com/store/apps/details?id=co.uk.sonicfactory.kineticcanvas" target="_blank">Google Play</a><br><i>Android (mobile)</i></td>    
           </tr>
           <tr>
-            <td width="35%"><a href="https://sonicfactory.itch.io/kinetic-canvas" target="_blank" aria-label="Download Kinetic Canvas from Itch"><img src="img/kinetic-canvas/buttons/button_Itch.webp" alt="Itch.io link button"></td>
+            <td width="35%"><a href="https://sonicfactory.itch.io/kinetic-canvas" target="_blank" aria-label="Download Kinetic Canvas from Itch"><img src="/img/kinetic-canvas/buttons/button_Itch.webp" alt="Itch.io link button"></td>
             <td><a href="https://sonicfactory.itch.io/kinetic-canvas" target="_blank">Itch.io</a><br><i>Windows PC</i></td>    
           </tr>
           <tr>
-            <td width="35%"><a href="https://store.steampowered.com/app/3526260/Kinetic_Canvas" target="_blank" aria-label="Download Kinetic Canvas from Steam"><img src="img/kinetic-canvas/buttons/button_Steam.webp" alt="Steam Store link button"></td>
+            <td width="35%"><a href="https://store.steampowered.com/app/3526260/Kinetic_Canvas" target="_blank" aria-label="Download Kinetic Canvas from Steam"><img src="/img/kinetic-canvas/buttons/button_Steam.webp" alt="Steam Store link button"></td>
             <td><a href="https://store.steampowered.com/app/3526260/Kinetic_Canvas" target="_blank">Steam</a><br><i>Windows PC & MacOS</i></td>
           </tr>
         </tbody>
@@ -142,23 +142,23 @@
 
       <h2>Screenshots</h2>
       <div class="gallery">
-        <a href="img/kinetic-canvas/screenshots/kc-ss1.webp">
-          <img src="img/kinetic-canvas/screenshots/kc-ss1.webp" alt="Screenshot 1 of Kinetic Canvas app, showing abstract patterns" />
+        <a href="/img/kinetic-canvas/screenshots/kc-ss1.webp">
+          <img src="/img/kinetic-canvas/screenshots/kc-ss1.webp" alt="Screenshot 1 of Kinetic Canvas app, showing abstract patterns" />
         </a>
-        <a href="img/kinetic-canvas/screenshots/kc-ss2.webp">
-          <img src="img/kinetic-canvas/screenshots/kc-ss2.webp" alt="Screenshot 2 of Kinetic Canvas app, showing abstract patterns"  />
+        <a href="/img/kinetic-canvas/screenshots/kc-ss2.webp">
+          <img src="/img/kinetic-canvas/screenshots/kc-ss2.webp" alt="Screenshot 2 of Kinetic Canvas app, showing abstract patterns"  />
         </a>
-        <a href="img/kinetic-canvas/screenshots/kc-ss3.webp">
-          <img src="img/kinetic-canvas/screenshots/kc-ss3.webp" alt="Screenshot 3 of Kinetic Canvas app, showing abstract patterns"  />
+        <a href="/img/kinetic-canvas/screenshots/kc-ss3.webp">
+          <img src="/img/kinetic-canvas/screenshots/kc-ss3.webp" alt="Screenshot 3 of Kinetic Canvas app, showing abstract patterns"  />
         </a>
-        <a href="img/kinetic-canvas/screenshots/kc-ss4.webp">
-          <img src="img/kinetic-canvas/screenshots/kc-ss4.webp" alt="Screenshot 4 of Kinetic Canvas app, showing the options menu"  />
+        <a href="/img/kinetic-canvas/screenshots/kc-ss4.webp">
+          <img src="/img/kinetic-canvas/screenshots/kc-ss4.webp" alt="Screenshot 4 of Kinetic Canvas app, showing the options menu"  />
         </a>
-        <a href="img/kinetic-canvas/screenshots/kc-ss5.webp">
-          <img src="img/kinetic-canvas/screenshots/kc-ss5.webp" alt="Screenshot 5 of Kinetic Canvas app, showing abstract patterns"  />
+        <a href="/img/kinetic-canvas/screenshots/kc-ss5.webp">
+          <img src="/img/kinetic-canvas/screenshots/kc-ss5.webp" alt="Screenshot 5 of Kinetic Canvas app, showing abstract patterns"  />
         </a>
-        <a href="img/kinetic-canvas/screenshots/kc-ss6.webp">
-          <img src="img/kinetic-canvas/screenshots/kc-ss6.webp" alt="Screenshot 6 of Kinetic Canvas app, showing abstract patterns"  />
+        <a href="/img/kinetic-canvas/screenshots/kc-ss6.webp">
+          <img src="/img/kinetic-canvas/screenshots/kc-ss6.webp" alt="Screenshot 6 of Kinetic Canvas app, showing abstract patterns"  />
         </a>                                
       </div>
 
@@ -184,7 +184,7 @@
 
       <h2>Support & feedback</h2>
       <ul>
-        <li>Please see the <a href="about.html">about</a> page for support queries and any questions related to the app.</li>
+        <li>Please see the <a href="/about/">about</a> page for support queries and any questions related to the app.</li>
         <li>If you have any suggestions for changes or improvements, I’d love to hear them!</li>
         <li>If you like the app, please consider rating it 5 stars, or donating in the mobile app! Your support is much appreciated.</li>
       </ul>
