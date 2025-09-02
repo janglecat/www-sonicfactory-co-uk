@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCG63HM864"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KCG63HM864');
+    </script>
+    
+    <script src="/scripts/sonicfactory.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ZenCanvas",
+      "image": "https://sonicfactory.co.uk/img/zencanvas/logo/zc-logo-512.webp",
+      "operatingSystem": "Windows",
+      "applicationCategory": "GameApplication",
+      "description": "ZenCanvas is an interactive generative art & sound app.  It's made for meditation, combining beautiful graphics and peaceful music.",
+      "author": {
+        "@type": "Organization",
+        "name": "Sonicfactory"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sonicfactory"
+      },
+      "screenshot": [
+        "https://sonicfactory.co.uk/img/zencanvas/screenshots/zc-ss1.webp"
+      ],
+      "url": "https://sonicfactory.co.uk"
+    }
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="/css/pico.min.css" />
+    <link rel="stylesheet" href="/css/sonicfactory.css">
+    <title>ZenCanvas</title>
+    <link rel="icon" type="image/png" href="/img/site/favicon.png" />
+    <meta name="description" content="ZenCanvas">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="navbar"></div>
+        <script>
+          fetch('/nav.html')  // absolute path to nav.html at root
+            .then(res => res.text())
+            .then(html => {
+              document.getElementById('navbar').innerHTML = html;
+            });
+        </script>
+      </div>
+    </header>
+    <main class="container" aria-labelledby="zencanvas-title">
+      <h2>Screenshots</h2>
+      <div class="gallery">
+        <a href="/img/zencanvas/screenshots/zc-ss1.webp">
+          <img src="/img/zencanvas/screenshots/zc-ss1.webp" alt="Screenshot 1 of ZenCanvas app, showing abstract patterns" />
+        </a>
+      </div>
+
+      <h2>How to play</h2>
+      <ul>
+        <li>Tap & draw with your finger.</li>
+        <li>Press 'F' to toggle fullscreen mode.</li>
+        <li>Press 'Space' to pause and take screenshots for your desktop.</li>
+      </ul>
+
+      <h2>Support & feedback</h2>
+      <ul>
+        <li>Please see the <a href="/about/">about</a> page for support queries and any questions related to the app.</li>
+        <li>If you have any suggestions for changes or improvements, I’d love to hear them!</li>
+      </ul>
+    </main>
+    <footer> 
+      <div class="container">
+        <section>
+          <hr>
+          <small>© Copyright 2025, Sonicfactory / Chris Green. All Rights Reserved.</small>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
