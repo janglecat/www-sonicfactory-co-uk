@@ -129,25 +129,3 @@ nav a {
   }
 }
 
-header {
-  /* Black at 50% opacity */
-  background-color: rgba(0, 0, 0, 0.5); 
-  
-  /* Optional: Adds a subtle blur effect to the background image behind the bar */
-  backdrop-filter: blur(5px); 
-  -webkit-backdrop-filter: blur(5px);
-
-  /* Ensures the bar stretches full width even if content is in a container */
-  width: 100%;
-  position: sticky; /* Optional: keeps the navbar at the top when scrolling */
-  top: 0;
-  z-index: 1000;
-  
-  /* Adjust padding to make the bar feel substantial */
-  padding: 0.5rem 0;
-}
-
-/* Ensure the container inside the header doesn't add conflicting background */
-header .container {
-  background: transparent;
-}
