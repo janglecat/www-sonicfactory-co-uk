@@ -69,13 +69,13 @@
           <li>PayPal: <a href="https://paypal.me/sonicfactory" target="_blank">https://paypal.me/sonicfactory</a></li>
         </ul>
     </main> 
-	<footer> 
+	<footer id="footer">
 		<script>
-		  fetch('/footer.html')
-			.then(res => res.text())
-			.then(html => {
-			  document.getElementById('footer').innerHTML = html;
-			});
+			fetch('/footer.html')
+				.then(res => res.text())
+				.then(html => {
+					document.getElementById('footer').innerHTML = html;
+				});
 		</script>
 	</footer> 
   </body>

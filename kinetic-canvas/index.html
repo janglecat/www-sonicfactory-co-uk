@@ -205,15 +205,15 @@
         <li>If you like the app, please consider rating it 5 stars, or donating in the mobile app! Your support is much appreciated.</li>
       </ul>
     </main>
-	<footer> 
+	<footer id="footer">
 		<script>
-		  fetch('/footer.html')
-			.then(res => res.text())
-			.then(html => {
-			  document.getElementById('footer').innerHTML = html;
-			});
+			fetch('/footer.html')
+				.then(res => res.text())
+				.then(html => {
+					document.getElementById('footer').innerHTML = html;
+				});
 		</script>
-	</footer> 
+	</footer>
   </body>
 </html>
 
