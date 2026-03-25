@@ -129,3 +129,17 @@ nav a {
   }
 }
 
+/* Active Page Highlight */
+nav ul li a.active {
+  color: #ffcc00; /* Bold Orange-Yellow */
+  font-weight: 800; /* Extra bold */
+  text-shadow: 0px 0px 8px rgba(255, 204, 0, 0.4); /* Subtle glow */
+  border-bottom: 2px solid #ffcc00;
+  opacity: 1;
+}
+
+/* Hover State (Optional but recommended) */
+nav ul li a:hover {
+  color: #ffcc00;
+  transition: 0.3s ease;
+}

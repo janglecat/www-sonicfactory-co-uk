@@ -74,17 +74,32 @@
     <meta name="description" content="Kinetic Canvas - an interactive art game on PC, MacOS and Android.  Great for meditation and just chilling out generally.">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div id="navbar"></div>
-        <script>
-          fetch('/nav.html')  // absolute path to nav.html at root
-            .then(res => res.text())
-            .then(html => {
-              document.getElementById('navbar').innerHTML = html;
-            });
-        </script>
-      </div>
+	<header>
+		<div class="container">
+			<div id="navbar"></div>
+				<script>
+					fetch('/nav.html')
+					  .then(res => res.text())
+					  .then(html => {
+						const navElement = document.getElementById('navbar');
+						navElement.innerHTML = html;
+
+						// Get all links in the newly loaded navbar
+						const links = navElement.querySelectorAll('a');
+						const currentPath = window.location.pathname;
+
+						links.forEach(link => {
+						  // Check if the link's href matches the current path
+						  // We use 'endsWidth' or a direct check to handle root "/" vs "/index.html"
+						  if (link.getAttribute('href') === currentPath || 
+							 (currentPath === '/' && link.getAttribute('href') === '/index.html')) {
+							link.classList.add('active');
+						  }
+						});
+					  });
+				</script>
+			</div>
+		</div>
     </header>
     <main class="container" aria-labelledby="kinetic-canvas-title">
       <h1 id="kinetic-canvas-title">Kinetic Canvas</h1>
