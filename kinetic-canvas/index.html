@@ -184,14 +184,15 @@
         <li>If you like the app, please consider rating it 5 stars, or donating in the mobile app! Your support is much appreciated.</li>
       </ul>
     </main>
-    <footer> 
-      <div class="container">
-        <section>
-          <hr>
-          <small>© Copyright 2026, Sonicfactory / Chris Green. All Rights Reserved.</small>
-        </section>
-      </div>
-    </footer>
+	<footer> 
+		<script>
+		  fetch('/footer.html')
+			.then(res => res.text())
+			.then(html => {
+			  document.getElementById('footer').innerHTML = html;
+			});
+		</script>
+	</footer> 
   </body>
 </html>
 

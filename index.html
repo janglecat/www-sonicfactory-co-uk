@@ -26,7 +26,7 @@
       <div class="container">
         <div id="navbar"></div>
         <script>
-          fetch('/nav.html')  // absolute path to nav.html at root
+          fetch('/nav.html')
             .then(res => res.text())
             .then(html => {
               document.getElementById('navbar').innerHTML = html;
@@ -42,9 +42,9 @@
       <p>I made <a href="/">Kinetic Canvas</a>, an interactive art app for phones, tablets, desktop computers, VR headsets.</p>
       <p>I also make <a href="/music/">music</a> and small <a href="/games/">games</a>.</p>
       <h2>Socials</h2>
-      Instagram: <a href="https://www.instagram.com/sonicfactoryuk/" target="_blank">@sonicfactoryuk</a><br>
-      BlueSky: <a href="https://bsky.app/profile/sonicfactory.bsky.social" target="_blank">@sonicfactory.bsky.social</a><br>
-      YouTube: <a href="https://www.youtube.com/@sonicfactory-uk" target="_blank">@sonicfactory-uk</a><br>
+      Instagram: <a href="https://www.instagram.com/sonicfactoryuk/" target="_blank" rel="me">@sonicfactoryuk</a><br>
+      BlueSky: <a href="https://bsky.app/profile/sonicfactory.bsky.social" target="_blank" rel="me">@sonicfactory.bsky.social</a><br>
+      YouTube: <a href="https://www.youtube.com/@sonicfactory-uk" target="_blank" rel="me">@sonicfactory-uk</a><br>
 	  <h2>Tips and donations</h2>
       <p>If you want to donate and support my work, you can use:<br>
         <ul>
@@ -52,14 +52,15 @@
           <li>PayPal: <a href="https://paypal.me/sonicfactory" target="_blank">https://paypal.me/sonicfactory</a></li>
         </ul>
     </main> 
-    <footer> 
-      <div class="container">
-        <section>
-          <hr>
-          <small>© Copyright 2026, Sonicfactory / Chris Green. All Rights Reserved.</small>
-        </section>
-      </div>
-    </footer>
+	<footer> 
+		<script>
+		  fetch('/footer.html')
+			.then(res => res.text())
+			.then(html => {
+			  document.getElementById('footer').innerHTML = html;
+			});
+		</script>
+	</footer> 
   </body>
 </html>
 
