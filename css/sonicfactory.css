@@ -99,3 +99,19 @@ html {
   background-size: auto;
   background-position: top left;
 }
+
+.nav-logo {
+  /* Set height to 1em so it scales automatically with font-size */
+  height: 1.2em; 
+  width: auto;
+  display: block;
+  /* Keeps the logo crisp if it's a small PNG */
+  vertical-align: middle;
+}
+
+/* Optional: Add a slight hover effect to the logo link */
+.logo-link {
+  display: flex;
+  align-items: center;
+  padding: 0 !important; /* Removes Pico's default link padding for the logo */
+}
