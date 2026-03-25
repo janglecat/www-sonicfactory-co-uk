@@ -100,17 +100,31 @@ html {
   background-position: top left;
 }
 
+/* Navigation fix */
 nav ul {
   display: flex;
   flex-wrap: wrap; 
   justify-content: flex-start; 
+  align-items: center; /* Keeps logo and text vertically centered */
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 nav ul li {
-  white-space: nowrap;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 10px; /* Reduces Pico's wide default padding for mobile */
+}
+
+nav a {
+  white-space: nowrap; /* Forces "Kinetic Canvas" to stay on one line */
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    padding: 2px 5px; /* Even tighter spacing on small phones */
+  }
+  nav a {
+    font-size: 0.9rem; /* Just a tiny bit smaller to help everything fit */
+  }
 }
