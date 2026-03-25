@@ -100,36 +100,48 @@ html {
   background-position: top left;
 }
 
-/* Navigation fix */
 nav ul {
   display: flex;
   flex-wrap: wrap; 
   justify-content: flex-start; 
-  align-items: center; /* Keeps logo and text vertically centered */
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 nav ul li {
-  padding: 5px 10px; /* Reduces Pico's wide default padding for mobile */
+  padding: 5px 10px;
 }
 
 nav a {
-  white-space: nowrap; /* Forces "Kinetic Canvas" to stay on one line */
+  color: inherit; 
+  transition: color 0.3s ease;
+  white-space: nowrap;
   display: inline-block;
+}
+
+nav a:hover {
+  color: #ffcc00 !important;
+  text-decoration: none !important;
+  transition: 0.3s ease;  
+}
+
+nav a.active {
+  color: #ffcc00 !important; 
+  font-weight: 800 !important;
+  text-decoration: none !important; 
 }
 
 @media (max-width: 600px) {
   nav ul li {
-    padding: 2px 5px; /* Even tighter spacing on small phones */
+    padding: 2px 5px;
   }
   nav a {
-    font-size: 0.9rem; /* Just a tiny bit smaller to help everything fit */
+    font-size: 0.9rem;
   }
 }
 
-/* Active Page Highlight */
 nav ul li a.active {
   color: #ffcc00; /* Bold Orange-Yellow */
   font-weight: 800; /* Extra bold */
@@ -138,8 +150,6 @@ nav ul li a.active {
   opacity: 1;
 }
 
-/* Hover State (Optional but recommended) */
-nav ul li a:hover {
-  color: #ffcc00;
-  transition: 0.3s ease;
+a {
+  text-decoration: none !important;
 }
