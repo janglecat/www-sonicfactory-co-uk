@@ -22,17 +22,34 @@
     <meta name="description" content="Music created by Sonicfactory">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div id="navbar"></div>
-        <script>
-          fetch('/nav.html')  // absolute path to nav.html at root
-            .then(res => res.text())
-            .then(html => {
-              document.getElementById('navbar').innerHTML = html;
-            });
-        </script>
-      </div>
+	<header>
+		<div class="container">
+			<div id="navbar"></div>
+				<script>
+					fetch('/nav.html')
+					  .then(res => res.text())
+					  .then(html => {
+						const navElement = document.getElementById('navbar');
+						navElement.innerHTML = html;
+
+						// Get the current page path (e.g., "/music/" or "/")
+						const currentPath = window.location.pathname;
+
+						// Find all links in the injected navbar
+						const links = navElement.querySelectorAll('a');
+
+						links.forEach(link => {
+						  const linkPath = link.getAttribute('href');
+						  
+						  // Match the link to the URL
+						  if (currentPath === linkPath || (currentPath === '/' && linkPath === '/index.html')) {
+							link.classList.add('active');
+						  }
+						});
+					  });
+				</script>
+			</div>
+		</div>
     </header>
     <main class="container" aria-labelledby="music-title">
       <h1 id="music-title">Music</h1>
