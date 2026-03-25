@@ -84,17 +84,21 @@
 						const navElement = document.getElementById('navbar');
 						navElement.innerHTML = html;
 
-						// Get the current page path (e.g., "/music/" or "/")
-						const currentPath = window.location.pathname;
+						// Get path and strip the trailing slash if it exists
+						const currentPath = window.location.pathname.replace(/\/$/, "");
 
-						// Find all links in the injected navbar
 						const links = navElement.querySelectorAll('a');
 
 						links.forEach(link => {
-						  const linkPath = link.getAttribute('href');
+						  // Get the href and strip its trailing slash for the comparison
+						  let linkPath = link.getAttribute('href').replace(/\/$/, "");
 						  
-						  // Match the link to the URL
-						  if (currentPath === linkPath || (currentPath === '/' && linkPath === '/index.html')) {
+						  // Special case for homepage
+						  if (currentPath === "" && (linkPath === "" || linkPath === "/index.html")) {
+							link.classList.add('active');
+						  } 
+						  // Match the paths
+						  else if (linkPath !== "" && currentPath === linkPath) {
 							link.classList.add('active');
 						  }
 						});
