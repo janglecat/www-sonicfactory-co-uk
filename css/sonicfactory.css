@@ -100,26 +100,6 @@ html {
   background-position: top left;
 }
 
-/* 1. Ensure the list item and link are flex containers */
-.logo-item, 
-.logo-item a {
-  display: flex;
-  align-items: center;
-  /* Reset any height/padding that might be skewing the center */
-  height: 100%; 
-}
-
-/* 2. Style the logo itself */
-.nav-logo {
-  height: 1.2em; /* Matches font scale */
-  width: auto;
-  display: block;
-  /* Use vertical-align as a fallback */
-  vertical-align: middle;
-}
-
-/* 3. Optional: Pico.css specific nudge */
-nav ul li {
-  display: flex;
-  align-items: center;
+nav ul li a {
+  white-space: nowrap; /* Prevents text from wrapping to a second line */
 }
