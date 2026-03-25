@@ -72,14 +72,15 @@
         <li>This website also uses Google Tags to track visitor activity using Google Analytics.</li>
       </ul>
     </main> 
-    <footer> 
-      <div class="container">
-        <section>
-          <hr>
-          <small>© Copyright 2026, Sonicfactory / Chris Green. All Rights Reserved.</small>
-        </section>
-      </div>
-    </footer>
+	<footer id="footer">
+		<script>
+			fetch('/footer.html')
+				.then(res => res.text())
+				.then(html => {
+					document.getElementById('footer').innerHTML = html;
+				});
+		</script>
+	</footer>
   </body>
 </html>
 
